@@ -1,4 +1,4 @@
-# Day16_Firebase_DataBase
+# Day16_Firebase_DataBase App
 While Creating this App i learned about How to connect Our App to Firebase 
 How to Create Firebase Account
 Firstly, i am Created Login page in Linear layout
