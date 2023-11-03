@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "844157187157",
+    "project_id": "data-base-lecture-d9aee",
+    "storage_bucket": "data-base-lecture-d9aee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844157187157:android:5b37489e2de901492f10dc",
+        "android_client_info": {
+          "package_name": "com.helllo.day16database"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPnV2kooXZZTmBXn1x-Deo_MmX4nQu6Do"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
