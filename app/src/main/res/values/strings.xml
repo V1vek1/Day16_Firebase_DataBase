@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Day16 DataBase</string>
+    <string name="enter_unique_user_id">Enter Unique User Id</string>
+    <string name="sign_in">SIGN IN</string>
 </resources>

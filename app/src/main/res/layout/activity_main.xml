@@ -107,4 +107,12 @@
         android:backgroundTint="@color/yellow"
         android:text="SIGN UP" />
 
+    <TextView
+        android:id="@+id/tvSignIN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="If already registered,Click Sign In" />
+
 </LinearLayout>

@@ -1,10 +1,11 @@
 package com.helllo.day16database
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -13,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     //Yha maine "lateinit" Datatype use kiya, Lateint ka matlab h ki isko iss "code" ko ya Variable ko baad me
     //"initialize karo jabhi or jaha bhi program me call kiya jaye Or iska Type h "DatabaseReference"
-    lateinit var database : DatabaseReference
+    private lateinit var database : DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,8 +51,8 @@ class MainActivity : AppCompatActivity() {
 
 
 
-            //aab yaha per maine "child" class bnakar :Firebase ke database me bhej rhe h,Or last me ek
-            //"SuccessListener" add kiya jisme ek "Toast" pass kiya, Jisse yeh pta chale ki Users ne
+            //aab yaha per mai "child" class bnakar :Firebase ke database me bhej rhe h,Or last me ek
+            //"FailureListener" add kiya jisme ek "Toast" pass kiya, Jisse yeh pta chale ki Users ne
             //Registration kiya ya nahi
             database.child(uniqueId).setValue(user).addOnSuccessListener {
 
@@ -59,11 +60,20 @@ class MainActivity : AppCompatActivity() {
                                      //page se "Name" wala "EditText" Clear ho jayega yani khali ho jayega, Isi Tarike se hum
                                      //sabhi "EditText" ko CLear kar sakte h
 
+                //Yeh toast Tab show hoga jab User Successfully Register karlega humare App per
                 Toast.makeText(this,"User Registered", Toast.LENGTH_SHORT).show()
 
-            }.addOnSuccessListener {
+            }.addOnFailureListener {
                 Toast.makeText(this,"Failed", Toast.LENGTH_SHORT).show()
             }
         }
+
+        val signIntent = findViewById<TextView>(R.id.tvSignIN)
+
+        signIntent.setOnClickListener{
+            val openSignInActivity = Intent(this, SignInActivity::class.java)
+            startActivity(openSignInActivity)
+        }
+
     }
 }
