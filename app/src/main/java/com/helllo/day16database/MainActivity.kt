@@ -56,7 +56,8 @@ class MainActivity : AppCompatActivity() {
             database.child(uniqueId).setValue(user).addOnSuccessListener {
 
                 etName.text?.clear() //Iss Code ka matlab h ki jab, Users Successfully Register karle to, Login
-                                     //page se "Name" wala "EditText" Clear ho jayega yani khali ho jayega
+                                     //page se "Name" wala "EditText" Clear ho jayega yani khali ho jayega, Isi Tarike se hum
+                                     //sabhi "EditText" ko CLear kar sakte h
 
                 Toast.makeText(this,"User Registered", Toast.LENGTH_SHORT).show()
 
