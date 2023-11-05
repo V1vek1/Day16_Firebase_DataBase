@@ -55,6 +55,9 @@ class MainActivity : AppCompatActivity() {
             //Registration kiya ya nahi
             database.child(uniqueId).setValue(user).addOnSuccessListener {
 
+                etName.text?.clear() //Iss Code ka matlab h ki jab, Users Successfully Register karle to, Login
+                                     //page se "Name" wala "EditText" Clear ho jayega yani khali ho jayega
+
                 Toast.makeText(this,"User Registered", Toast.LENGTH_SHORT).show()
 
             }.addOnSuccessListener {
